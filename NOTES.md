@@ -18,3 +18,9 @@ I use AI tools all the time, but I didn't really understand how a neural network
 
 
 - Guess: simple model recall on Kepler test set ≈ 75%
+
+## Nov 23, Step 4: simple model (written myself)
+- Logistic regression from scratch: log10 + standardise, sigmoid, cross-entropy, gradient descent
+- Loss 0.693 → 0.634. Test: accuracy 0.78, precision 0.73, recall 0.89
+- Weights: depth −0.53, duration −0.51, period +0.64 (deep/long dips → fake)
+- Mistakes are mostly false alarms (26 FP vs 9 FN): ~1/3 of fakes look like planets in these 3 numbers, same as my EDA showed. A straight-line model can't catch fakes at both extremes. The CNN needs the dip shape
