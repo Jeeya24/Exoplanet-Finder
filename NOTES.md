@@ -13,3 +13,5 @@ I use AI tools all the time, but I didn't really understand how a neural network
 - Added the local view because in the global view a short dip was only ~5 points wide, too small for the CNN to see its shape
 - Bug: 13 fakes crashed because their "dip" was a third of the orbit, so hiding the dips hid everything. Capped the mask at half the orbit instead of dropping them
 - Check: the cleaned dip for KOI-923.01 was ~1,250 ppm vs NASA's 1,240
+- Flagged 17 signals whose local view was mostly interpolated; all 17 are false positives
+  (incl. the 13 with dips ≥ 1/3 of the orbit). Keeping them, but will check CNN results with/without them
