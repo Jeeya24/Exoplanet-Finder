@@ -15,3 +15,6 @@ I use AI tools all the time, but I didn't really understand how a neural network
 - Check: the cleaned dip for KOI-923.01 was ~1,250 ppm vs NASA's 1,240
 - Flagged 17 signals whose local view was mostly interpolated; all 17 are false positives
   (incl. the 13 with dips ≥ 1/3 of the orbit). Keeping them, but will check CNN results with/without them
+
+
+- Guess: simple model recall on Kepler test set ≈ 75%
