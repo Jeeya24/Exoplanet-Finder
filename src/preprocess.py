@@ -5,8 +5,12 @@ Works for Kepler and TESS: pass time, period, t0 and duration in the same units 
 
 import warnings
 
-import lightkurve as lk
 import numpy as np
+
+# Hide lightkurve's harmless "tpfmodel needs oktopus" import warning (we don't use tpfmodel)
+with warnings.catch_warnings():
+    warnings.filterwarnings("ignore", message=".*tpfmodel submodule.*")
+    import lightkurve as lk
 
 warnings.filterwarnings("ignore", module="lightkurve")
 
